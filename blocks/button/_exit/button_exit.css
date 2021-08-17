@@ -1,4 +1,4 @@
-.button__exit{
+.button_exit{
     position: absolute;
     top: -40px;
     right: -30px;
@@ -9,7 +9,7 @@
     }
 
     @media screen and (max-width:767px) {
-        .button__exit{
+        .button_exit{
             max-height: 26px;
             max-width: 26px;
             right:18px;

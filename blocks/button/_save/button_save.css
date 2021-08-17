@@ -1,4 +1,4 @@
-.button__save{
+.button_save{
     margin:48px auto 37px;
     background: black;
     color: white;
@@ -14,7 +14,7 @@
 }
 
 @media screen and (max-width:767px) {
-    .button__save{
+    .button_save{
         width:238px;
         height: 46px;
         margin:45px auto 25px;
