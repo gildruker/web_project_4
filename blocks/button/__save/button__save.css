@@ -12,3 +12,11 @@
     height: 50px;
     border:none;
 }
+
+@media screen and (max-width:767px) {
+    .button__save{
+        width:238px;
+        height: 46px;
+        margin:45px auto 25px;
+    }
+}

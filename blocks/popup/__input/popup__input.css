@@ -13,7 +13,10 @@
     
 }
 
-.popup__input:active{
-    border:none;
-    border-bottom: 1px solid #000000;
+@media screen and (max-width:767px) {
+    .popup__input{
+        max-width: 238px;
+        margin-left: 20px;
+    }
+    
 }
