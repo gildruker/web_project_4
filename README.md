@@ -14,3 +14,10 @@
 The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
 
 Have fun with JavaScript!
+
+
+**TECH**
+i used java script.
+i manipulated the page ussing the DOM ,and made a popup form using it and three buttons.
+
+**link**

@@ -1,0 +1,13 @@
+.popup__title{
+    color: black;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin:34px 0 0 36px;
+    max-width: 330px;
+    justify-self: flex-start;
+
+}

@@ -1,0 +1,20 @@
+.button__edit{
+    display: flex;
+    width:24px;
+    height: 24px;
+    border:solid 1px white;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    margin-bottom: 9px;
+}
+
+@media screen and (max-width:767px) {
+ .button__edit{
+     width:18px;
+     height: 18px;
+     margin-bottom: 3px;
+    
+ }   
+}
