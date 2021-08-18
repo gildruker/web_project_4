@@ -1,6 +1,7 @@
 .popup__exit-pic{
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 @media screen and (max-width:767px) {

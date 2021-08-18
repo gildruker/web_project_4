@@ -1,4 +1,6 @@
 .button_like{
     margin-right: 18px;
     max-height: 19px;
+    background: white;
+    border:none;
 }

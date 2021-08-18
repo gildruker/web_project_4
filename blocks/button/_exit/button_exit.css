@@ -4,14 +4,16 @@
     right: -30px;
     background-color: rgba(0, 0,0,0);
     border:none;
-    max-height: 40px;
-    max-width: 40px;
+    max-height: 48px;
+    max-width: 48px;
+    object-fit: contain;
+    padding: 0;
     }
 
     @media screen and (max-width:767px) {
         .button_exit{
-            max-height: 26px;
-            max-width: 26px;
+            max-height: 34px;
+            max-width: 34px;
             right:18px;
             top:-30px;
         }
