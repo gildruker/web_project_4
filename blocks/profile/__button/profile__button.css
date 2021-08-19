@@ -1,0 +1,4 @@
+.profile__button{
+    transition: opacity .3s linear;
+    cursor: pointer;
+}
