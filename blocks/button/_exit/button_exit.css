@@ -2,18 +2,19 @@
     position: absolute;
     top: -40px;
     right: -30px;
-    background-color: rgba(0, 0,0,0);
     border:none;
-    max-height: 48px;
-    max-width: 48px;
-    object-fit: contain;
+    height: 48px;
+    width: 48px;
+    background: none;
     padding: 0;
+    background-image: url(../../../images/x-vec.svg);
+    background-position: center;
     }
 
     @media screen and (max-width:767px) {
         .button_exit{
-            max-height: 34px;
-            max-width: 34px;
+            height: 26px;
+            width: 26px;
             right:18px;
             top:-30px;
         }

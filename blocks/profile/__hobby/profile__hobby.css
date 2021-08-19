@@ -7,6 +7,11 @@
     text-align: left;
     color: white;
     margin: 16px 0 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 213px;
+
 
 }
 
