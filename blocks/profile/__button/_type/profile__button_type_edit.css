@@ -1,4 +1,4 @@
-.button_edit{
+.profile__button_type_edit{
     display: flex;
     width:24px;
     height: 24px;
@@ -8,10 +8,21 @@
     justify-content: center;
     align-self: flex-end;
     margin-bottom: 9px;
+    background-image: url(../../../../images/edit-vector.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+    transition: opacity .3s linear;
+    cursor: pointer;
+
+}
+
+.profile__button_type_edit:hover{
+    opacity:0.6;
 }
 
 @media screen and (max-width:767px) {
- .button_edit{
+ .profile__button_type_edit{
      width:18px;
      height: 18px;
      margin-bottom: 3px;

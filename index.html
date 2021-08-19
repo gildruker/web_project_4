@@ -10,7 +10,7 @@
 <body class="page">
     
     <header class="header">
-        <img src="images/header-title.png" alt="around the u.s" class="header__title">
+        <img src="images/header-vec.svg" alt="around the u.s" class="header__title">
     </header>
 
  
@@ -21,23 +21,25 @@
                 <img src="images/profile-pic.jpg" alt="profile__avatar" class="profile__avatar">
                 <div class="profile__info">
                     <div class="profile__edit-container">
-                        <p class="profile__full-name">Gil Druker</p>
-                        <button class="button button_edit"><img src="images/edit-vector.png" alt="pencil" class="profile__edit-pic"></button>
+                        <h2 class="profile__full-name">Gil Druker</h2>
+                        <button class="profile__button_type_edit" type="button"></button>
                     </div>
                     <p class="profile__hobby">Basketball</p>
                 </div>
             </div>
-                <button class="button button_add"><img src="images/add-vec.svg" alt="add"></button>
+                <button class="profile__button_type_add" type="button"></button>
         </section>
 
         <section class="popup">
-            <form class="popup__container" method="" name="edit-profile" action="/">
-                <button class="button button_exit"></button>
-                <p class="popup__title">Edit profile</p>
-                <input type="text" class="popup__input popup__input_full-name">
-                <input type="text" class="popup__input popup__input_hobby">
-                <button type="submit" class="button button_save">save</button>
+            <div class="popup__container">
+            <form class="popup__form" method="POST" name="edit-profile" action="/">
+                <button class="popup__button_type_exit" type="button"></button>
+                <h3 class="popup__title">Edit profile</h3>
+                <input type="text" class="popup__input popup__input_type_full-name" name="full-name">
+                <input type="text" class="popup__input popup__input_type_hobby" name="hobby">
+                <button type="submit" class="popup__button_type_save">save</button>
             </form>
+        </div>
         </section>
 
        
@@ -47,43 +49,43 @@
             <div class="card">
                 <img src="images/kirill-pershin-1088404-unsplash-1.jpg" alt="123" class="card__image">
                 <div class="card__container">
-                <p class="card__description">Yosemite Valley</p>
-                <button class="button button_like"><img src="images/heart-vector.svg" alt="like" class="card__like-pic"></button>   
+                <h3 class="card__description">Yosemite Valley</h3>
+                <button class="card__button_type_like" type="button"></button>   
             </div>
             </div>
             <div class="card">
                 <img src="images/kirill-pershin-1088404-unsplash.jpg" alt="123" class="card__image">
                 <div class="card__container">
-                <p class="card__description">Lake Louise</p>
-                <button class="button button_like"><img src="images/heart-vector.svg" alt="like" class="card__like-pic"></button>
+                <h3 class="card__description">Lake Louise</h3>
+                <button class="card__button_type_like" type="button"></button>
             </div>
             </div>
             <div class="card">
                 <img src="images/kirill-pershin-1404681-unsplash-1.jpg" alt="312" class="card__image">
                 <div class="card__container">
-                <p class="card__description">Bald Mountains</p>
-                <button class="button button_like"><img src="images/heart-vector.svg" alt="like" class="card__like-pic"></button>
+                <h3 class="card__description">Bald Mountains</h3>
+                <button class="card__button_type_like" type="button"></button>
             </div>
             </div>
             <div class="card">
                 <img src="images/kirill-pershin-1404681-unsplash.jpg" alt="321" class="card__image">
                 <div class="card__container">
-                <p class="card__description">Latemar</p>
-                <button class="button button_like"><img src="images/heart-vector.svg" alt="like" class="card__like-pic"></button>
+                <h3 class="card__description">Latemar</h3>
+                <button class="card__button_type_like" type="button"></button>
             </div>
             </div>
             <div class="card">
                 <img src="images/kirill-pershin-1556355-unsplash-1.jpg" alt="1232" class="card__image">
                 <div class="card__container">
-                <p class="card__description">Vanoise National Park</p>
-                <button class="button button_like"><img src="images/heart-vector.svg" alt="like" class="card__like-pic"></button>
+                <h3 class="card__description">Vanoise National Park</h3>
+                <button class="card__button_type_like" type="button"></button>
             </div>
             </div>
             <div class="card">
                 <img src="images/kirill-pershin-1556355-unsplash.jpg" alt="123" class="card__image">
                 <div class="card__container">
-                <p class="card__description">Lago di Braies </p>
-                <button class="button button_like"><img src="images/heart-vector.svg" alt="like" class="card__like-pic"></button>
+                <h3 class="card__description">Lago di Braies </h3>
+                <button class="card__button_type_like" type="button"></button>
             </div>
             </div>
 

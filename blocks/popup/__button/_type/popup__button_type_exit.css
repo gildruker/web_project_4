@@ -1,0 +1,27 @@
+.popup__button_type_exit{
+    position: absolute;
+    top:-40px;
+    right: -40px;
+    border:none;
+    height: 48px;
+    width: 48px;
+    background: none;
+    padding: 0;
+    background-image: url(../../../../images/x-vec.svg);
+    background-position: center;
+    transition: opacity .3s linear;
+    cursor: pointer;
+    }
+
+    .popup__button_type_exit:hover{
+        opacity: 0.6;
+    }
+
+    @media screen and (max-width:767px) {
+        .popup__button_type_exit{
+            height: 26px;
+            width: 26px;
+            right:0px;
+            top:-30px;
+        }
+    }
