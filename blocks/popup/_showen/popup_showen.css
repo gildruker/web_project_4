@@ -1,3 +1,9 @@
 .popup_showen{
-    display:flex;
+    animation:popup .5s ease-in-out forwards;
+    display: flex;
+}
+
+@keyframes popup{
+    o%{opacity: 0;}
+    100%{opacity: 1;}
 }
