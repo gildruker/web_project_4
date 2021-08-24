@@ -6,7 +6,7 @@ const hobbyInput = popupEdit.querySelector(".popup__input_type_hobby");
 const fullName = document.querySelector(".profile__full-name");
 const hobby = document.querySelector(".profile__hobby");
 const buttonSave = document.querySelector(".popup__button_type_save");
-const formEdit = document.querySelector(".popup_form__type_edit");
+const formEdit = document.querySelector(".popup__form_type_edit");
 
 
 
