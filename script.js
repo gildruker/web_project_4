@@ -43,7 +43,7 @@ function profileEdit(evt){
     evt.preventDefault();
     fullName.textContent = fullNameInput.value;
     hobby.textContent = hobbyInput.value;
-    popupEdit.classList.remove("popup_showen");
+    closeEdit();
 }
 
 formEdit.addEventListener("submit",profileEdit);
@@ -177,7 +177,7 @@ function cardFormHandler(evt){
     newCard.name = cardTitleInput.value;
     newCard.link = cardUrlInput.value;
     document.querySelector(".cards").prepend(create(newCard));
-    popupCreate.classList.remove("popup_showen");
+    exitCreate()
 
     cardTitleInput.value = ""
     cardUrlInput.value = ""
