@@ -7,22 +7,35 @@ const fullName = document.querySelector(".profile__full-name");
 const hobby = document.querySelector(".profile__hobby");
 const buttonSave = document.querySelector(".popup__button_type_save");
 const formEdit = document.querySelector(".popup__form_type_edit");
+const buttonExitEdit = popupEdit.querySelector(".popup__button_type_exit");
 
+//open every popup function
+function openPopup(popup){
+  popup.classList.add("popup_showen");
+  console.log(popup.classList)
+}
 
+//closes every popup
+function closePopup(popup){
+  popup.classList.remove('popup_showen');
+}
 
+//open edit function
 function openEdit(){
-    popupEdit.classList.add("popup_showen");
+    openPopup(popupEdit)
     fullNameInput.value = fullName.textContent
     hobbyInput.value = hobby.textContent
-    
-    //exit button edit
-    const buttonExitEdit = popupEdit.querySelector(".popup__button_type_exit");
-    buttonExitEdit.addEventListener("click",function(evt){
-        evt.target.parentElement.parentElement.parentElement.classList.remove("popup_showen");
-    })
 }
 
 buttonEdit.addEventListener("click",openEdit);
+
+//exit button edit function
+function closeEdit(){
+  closePopup(popupEdit)
+}
+
+buttonExitEdit.addEventListener("click",closeEdit);
+
 
 
 //edit profile function
@@ -40,23 +53,23 @@ formEdit.addEventListener("submit",profileEdit);
 // open create form
 const buttonAdd = document.querySelector(".profile__button_type_add");
 const popupCreate = document.querySelector(".popup_type_create"); 
-console.log(popupCreate)
-
+const buttonExitAdd = popupCreate.querySelector(".popup__button_type_exit");
 
 function openCreate(){
-    popupCreate.classList.add("popup_showen");
-    
-    //create exit button 
-    const buttonExitAdd = popupCreate.querySelector(".popup__button_type_exit");
-    buttonExitAdd.addEventListener("click",function(evt){
-        evt.target.parentElement.parentElement.parentElement.classList.remove("popup_showen");
-    });
+    openPopup(popupCreate)
 }
 
 buttonAdd.addEventListener("click",openCreate);
 
 
-    //initial 6 cards    
+//create exit button 
+function exitCreate(){
+  closePopup(popupCreate);
+}
+
+buttonExitAdd.addEventListener("click",exitCreate);
+
+//initial 6 cards    
 const initialCards = [
     {
       name: "Yosemite Valley",
@@ -84,19 +97,28 @@ const initialCards = [
     }
   ];
 
+
+
 //card click open function 
-function biggerPicture(evt){
-    const picture = document.querySelector(".image-popup");
+const picture = document.querySelector(".image-popup");
+const pictureTitle = document.querySelector(".image-popup__title");
+const buttonExitCard = picture.querySelector(".popup__button_type_exit") 
+
+function openImagePopup(evt){
     picture.querySelector(".image-popup__image").src = evt.target.src;
-    const pictureTitle = document.querySelector(".image-popup__title");
     pictureTitle.textContent = evt.target.parentElement.parentElement.querySelector(".card__description").textContent;
     console.log(picture);
-    picture.querySelector(".image-popup__button").addEventListener("click",function(evt){
-        evt.target.parentElement.parentElement.classList.remove("popup_showen");
-    })
-    picture.classList.add("popup_showen");
+    openPopup(picture);
     console.log(picture.classList)
 }
+
+
+//card popup close
+function closePopupCard(){
+closePopup(picture);
+}
+
+buttonExitCard.addEventListener("click",closePopupCard)
 
 
 //create card function
@@ -109,11 +131,12 @@ function create(element){
     const cardImage = newCard.querySelector(".card__image"); 
     cardTitle.textContent = element.name;
     cardImage.src = element.link;
+    cardImage.alt = element.name;
 
     //card delete button
     const buttonDelete = newCard.querySelector(".card__button_type_delete");
-    buttonDelete.addEventListener("click",function(evt){
-        evt.target.parentElement.parentElement.remove()
+    buttonDelete.addEventListener("click",function(){
+    newCard.remove()
     })
 
     //card like button
@@ -123,9 +146,9 @@ function create(element){
 });
 
     //card click open image
-    cardImage.addEventListener("click",biggerPicture) 
+    cardImage.addEventListener("click",openImagePopup) 
 
-    document.querySelector(".cards").prepend(newCard);
+    return newCard;
 }
 
 
@@ -135,7 +158,7 @@ function create(element){
 //initial 6 card loop function
 function initial(cards){
         cards.forEach(card => {
-        create(card)
+        document.querySelector(".cards").prepend(create(card));
     });
 }
 
@@ -145,18 +168,15 @@ initial(initialCards);
 
 //create form handler function
 const createForm =document.querySelector(".popup__form_type_create");
+const cardTitleInput = popupCreate.querySelector(".popup__input_type_image-title");
+const cardUrlInput = popupCreate.querySelector(".popup__input_type_url");
 
 function cardFormHandler(evt){
     evt.preventDefault();
     newCard = {}
-
-    const cardTitleInput = popupCreate.querySelector(".popup__input_type_image-title");
     newCard.name = cardTitleInput.value;
-    
-    const cardUrlInput = popupCreate.querySelector(".popup__input_type_url");
     newCard.link = cardUrlInput.value;
-
-    create(newCard);
+    document.querySelector(".cards").prepend(create(newCard));
     popupCreate.classList.remove("popup_showen");
 
     cardTitleInput.value = ""
@@ -165,7 +185,3 @@ function cardFormHandler(evt){
 
 createForm.addEventListener("submit",cardFormHandler)
 
-
-
-
-// open image on click
