@@ -17,12 +17,14 @@
     
         <section class="popup popup_type_edit">
             <div class="popup__container popup__container_type_edit">
-            <form class="popup__form popup__form_type_edit" method="POST" name="edit-profile" >
+            <form class="popup__form popup__form_type_edit" novalidate method="POST" name="edit-profile" >
                 <button class="popup__button popup__button_type_exit" type="button"></button>
                 <h2 class="popup__title">Edit profile</h2>
-                <input type="text" class="popup__input popup__input_type_full-name" name="full-name">
-                <input type="text" class="popup__input popup__input_type_hobby" name="hobby">
-                <button type="submit" class="popup__button popup__button_type_save">save</button>
+                <input type="text" class="popup__input popup__input_type_full-name" name="full-name" id="popup-input-type-full-name" required minlength="2" maxlength="40">
+                <span id="popup-input-type-full-name-error" class="popup__input_type_full-name-error"></span>
+                <input type="text" class="popup__input popup__input_type_hobby" name="hobby" id="popup-input-type-hobby" required minlength="2" maxlength="200">
+                <span id="popup-input-type-hobby-error" class="popup__input_type_hobby-error"></span>
+                <button type="submit" class="popup__button  popup__button_type_save popup__button_type_submit">save</button>
             </form>
         </div>
         </section>
@@ -34,9 +36,11 @@
             <form class="popup__form popup__form_type_create" method="POST" name="edit-profile" action="/">
                 <button class="popup__button popup__button_type_exit" type="button"></button>
                 <h2 class="popup__title">New place</h2>
-                <input type="text" class="popup__input popup__input_type_image-title" name="image-title" placeholder="Image title">
-                <input type="text" class="popup__input popup__input_type_url" name="image-Url" placeholder="Image URL">
-                <button type="submit" class="popup__button popup__button_type_create">Create</button>
+                <input type="text" class="popup__input popup__input_type_image-title" name="image-title" placeholder="Image title" required id="popup-input-type-image-title"> 
+                <span id="popup-input-type-image-title-error" class="popup__input_type_image-title-error"></span>
+                <input type="text" class="popup__input popup__input_type_url" name="image-Url" placeholder="Image URL" required id="popup-input-type-url">
+                <span id="popup-input-type-url-error" class="popup__input_type_url-error"></span>
+                <button type="submit" class="popup__button popup__button_type_create popup__button_type_submit">Create</button>
             </form>
         </div>
         </section>
