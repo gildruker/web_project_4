@@ -159,13 +159,13 @@ function create(element){
 
 
 //initial 6 card loop function
-function initial(cards){
+function renderInitialCards(cards){
         cards.forEach(card => {
         document.querySelector(".cards").prepend(create(card));
     });
 }
 
-initial(initialCards);
+renderInitialCards(initialCards);
 
 
 
