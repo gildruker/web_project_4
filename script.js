@@ -1,3 +1,4 @@
+import {Card} from "./card.js";
 
 // open edit form
 const buttonEdit = document.querySelector(".profile__button_type_edit");
@@ -11,13 +12,13 @@ const formEdit = document.querySelector(".popup__form_type_edit");
 const buttonExitEdit = popupEdit.querySelector(".popup__button_type_exit");
 
 //open every popup function
-function openPopup(popup){
+export function openPopup(popup){
   popup.classList.add("popup_showen");
   document.addEventListener("keydown",closeOnEscape);
 }
 
 //closes every popup
-function closePopup(popup){
+    function closePopup(popup){
   popup.classList.remove('popup_showen');
   document.removeEventListener("keydown",closeOnEscape)
 }
@@ -73,48 +74,25 @@ function exitCreatePopup(){
 buttonExitAdd.addEventListener("click",exitCreatePopup);
 
 //initial 6 cards    
-const initialCards = [
-    {
-      name: "Yosemite Valley",
-      link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
-    },
-    {
-      name: "Lake Louise",
-      link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
-    },
-    {
-      name: "Bald Mountains",
-      link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
-    },
-    {
-      name: "Latemar",
-      link: "https://code.s3.yandex.net/web-code/latemar.jpg"
-    },
-    {
-      name: "Vanoise National Park",
-      link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
-    },
-    {
-      name: "Lago di Braies",
-      link: "https://code.s3.yandex.net/web-code/lago.jpg"
-    }
-  ];
+
 
 
 
 //card click open function 
-const picture = document.querySelector(".image-popup");
-const pictureTitle = document.querySelector(".image-popup__title");
-const buttonExitCard = picture.querySelector(".popup__button_type_exit") 
+/*
+
+
 
 function openImagePopup(evt){
     picture.querySelector(".image-popup__image").src = evt.target.src;
     pictureTitle.textContent = evt.target.parentElement.parentElement.querySelector(".card__description").textContent;
-    console.log(picture);
     openPopup(picture);
-    console.log(picture.classList)
+    
 }
-
+*/
+const picture = document.querySelector(".image-popup");
+const buttonExitCard = picture.querySelector(".popup__button_type_exit") 
+const pictureTitle = document.querySelector(".image-popup__title");
 
 //card popup close
 function closePopupCard(){
@@ -125,10 +103,11 @@ buttonExitCard.addEventListener("click",closePopupCard)
 
 
 //create card function
-
-function create(element){
-    const cardTemplate = document.querySelector("#photo").content;
-    const newCard = cardTemplate.querySelector(".card").cloneNode(true);
+  /*const cardTemplate = document.querySelector("#photo").content;
+  let newCard = cardTemplate.querySelector(".card").cloneNode(true);
+  */
+/*function create(element){
+    
 
     const cardTitle = newCard.querySelector(".card__description");
     const cardImage = newCard.querySelector(".card__image"); 
@@ -153,33 +132,37 @@ function create(element){
 
     return newCard;
 }
-
+*/
 
 
 
 
 //initial 6 card loop function
-function renderInitialCards(cards){
+/*function renderInitialCards(cards){
         cards.forEach(card => {
         document.querySelector(".cards").prepend(create(card));
     });
 }
 
 renderInitialCards(initialCards);
-
+*/
 
 
 //create form handler function
-const createForm =document.querySelector(".popup__form_type_create");
+const createForm = document.querySelector(".popup__form_type_create");
 const cardTitleInput = popupCreate.querySelector(".popup__input_type_image-title");
 const cardUrlInput = popupCreate.querySelector(".popup__input_type_url");
 
 function cardFormHandler(evt){
     evt.preventDefault();
-    newCard = {}
-    newCard.name = cardTitleInput.value;
-    newCard.link = cardUrlInput.value;
-    document.querySelector(".cards").prepend(create(newCard));
+    const titleInput = cardTitleInput.value;
+    console.log(titleInput);
+    const urlInput = cardUrlInput.value;
+    console.log(urlInput);
+    const newCard = {name:titleInput , link:urlInput}
+    const card = new Card(newCard ,"#photo")
+    const cardElement = card.createCard()
+    document.querySelector(".cards").prepend(cardElement);
     exitCreatePopup()
 
     cardTitleInput.value = ""
