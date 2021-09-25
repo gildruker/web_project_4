@@ -71,25 +71,8 @@ function exitCreatePopup(){
   closePopup(popupCreate);
 }
 
-buttonExitAdd.addEventListener("click",exitCreatePopup);
+buttonExitAdd.addEventListener("click",exitCreatePopup);  
 
-//initial 6 cards    
-
-
-
-
-//card click open function 
-/*
-
-
-
-function openImagePopup(evt){
-    picture.querySelector(".image-popup__image").src = evt.target.src;
-    pictureTitle.textContent = evt.target.parentElement.parentElement.querySelector(".card__description").textContent;
-    openPopup(picture);
-    
-}
-*/
 const picture = document.querySelector(".image-popup");
 const buttonExitCard = picture.querySelector(".popup__button_type_exit") 
 const pictureTitle = document.querySelector(".image-popup__title");
@@ -100,53 +83,6 @@ closePopup(picture);
 }
 
 buttonExitCard.addEventListener("click",closePopupCard)
-
-
-//create card function
-  /*const cardTemplate = document.querySelector("#photo").content;
-  let newCard = cardTemplate.querySelector(".card").cloneNode(true);
-  */
-/*function create(element){
-    
-
-    const cardTitle = newCard.querySelector(".card__description");
-    const cardImage = newCard.querySelector(".card__image"); 
-    cardTitle.textContent = element.name;
-    cardImage.src = element.link;
-    cardImage.alt = element.name;
-
-    //card delete button
-    const buttonDelete = newCard.querySelector(".card__button_type_delete");
-    buttonDelete.addEventListener("click",function(){
-    newCard.remove()
-    })
-
-    //card like button
-    const buttonLike = newCard.querySelector(".card__button_type_like");
-    buttonLike.addEventListener("click", function (evt){
-        evt.target.classList.toggle("card__button_type_like_active");
-});
-
-    //card click open image
-    cardImage.addEventListener("click",openImagePopup) 
-
-    return newCard;
-}
-*/
-
-
-
-
-//initial 6 card loop function
-/*function renderInitialCards(cards){
-        cards.forEach(card => {
-        document.querySelector(".cards").prepend(create(card));
-    });
-}
-
-renderInitialCards(initialCards);
-*/
-
 
 //create form handler function
 const createForm = document.querySelector(".popup__form_type_create");
