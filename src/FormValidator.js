@@ -1,5 +1,7 @@
+import {enableValidaitor } from "./constants.js";
+
 //form validation
-class FormValidator{
+export class FormValidator{
 constructor(settings,formElement){
   this._formElement = formElement;
   this._settings = settings;
@@ -32,9 +34,7 @@ errorElement.classList.add(inputErrElement);
 }
 
 _hideInputError = (formElement,inputElement,inputTypeErr,inputErrElement) => {
-console.log(`.${inputElement.id}-error`)
 const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-console.log(errorElement)
 inputElement.classList.remove(inputTypeErr)
 errorElement.classList.remove(inputErrElement);
 errorElement.textContent = "";
@@ -73,20 +73,6 @@ enableValidation(){
 }
 
 
-   const enableValidaitor = {
-    inputTypeErr:"popup__input_type_error",
-    inputErrElement:"popup__input-error_active",
-    btnDisabledClass:"popup__button_type_disabled",
-    formSelector:".popup__form",
-    inputSelector:".popup__input",
-    buttonElement:".popup__button_type_submit"
-  };
-
-   const editForm = new FormValidator(enableValidaitor,'.popup__form_type_edit')
-   editForm.enableValidation();
-
-   const addForm = new FormValidator(enableValidaitor,'.popup__form_type_create')
-   addForm.enableValidation();
 
    
 
