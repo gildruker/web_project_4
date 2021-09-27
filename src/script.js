@@ -67,7 +67,7 @@ function addCardFormSubmitHandler(evt){
 
     cardTitleInput.value = ""
     cardUrlInput.value = ""
-
+    //addCardValidator.enableValidation()
 }
 
 createForm.addEventListener("submit",addCardFormSubmitHandler)
