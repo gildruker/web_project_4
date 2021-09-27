@@ -1,15 +1,11 @@
 import {Card} from "./card.js";
 import { FormValidator} from "./FormValidator.js";
 import {openPopup,closeOnEscape,closePopup} from "./utils.js"
-import {enableValidaitor,initialCards,hobby,formEdit,buttonExitEdit,buttonAdd,popupCreate,buttonExitAdd,picture,buttonExitCard,overlays,cardUrlInput,cardTitleInput,createForm,buttonEdit,popupEdit,fullNameInput,hobbyInput,fullName} from "./constants.js" 
-
-console.log(buttonExitEdit,buttonAdd,buttonEdit,popupEdit)
-
-
+import {cards,enableValidaitor,initialCards,hobby,formEdit,buttonExitEdit,buttonAdd,popupAddCard,buttonExitAdd,popupImage,buttonExitCard,overlays,cardUrlInput,cardTitleInput,createForm,buttonEdit,popupEditProfile,fullNameInput,hobbyInput,fullName} from "./constants.js" 
 
 //open edit function
 function openEditPopup(){
-  openPopup(popupEdit)
+  openPopup(popupEditProfile)
   fullNameInput.value = fullName.textContent
   hobbyInput.value = hobby.textContent
 }
@@ -18,7 +14,7 @@ buttonEdit.addEventListener("click",openEditPopup);
 
 //exit button edit function
 function closeEditPopup(){
-  closePopup(popupEdit)
+  closePopup(popupEditProfile)
 }
 
 buttonExitEdit.addEventListener("click",closeEditPopup);
@@ -34,21 +30,21 @@ function submitEditProfileForm(evt){
 formEdit.addEventListener("submit",submitEditProfileForm);
 
 function openAddCardPopup(){
-    openPopup(popupCreate)
+    openPopup(popupAddCard)
 }
 
 buttonAdd.addEventListener("click",openAddCardPopup);
 
 //create exit button 
 function closeAddCardPopup(){
-  closePopup(popupCreate);
+  closePopup(popupAddCard);
 }
 
 buttonExitAdd.addEventListener("click",closeAddCardPopup);  
 
 //card popup close
 function closePopupCard(){
-closePopup(picture);
+closePopup(popupImage);
 }
 
 buttonExitCard.addEventListener("click",closePopupCard)
@@ -66,12 +62,12 @@ function addCardFormSubmitHandler(evt){
     const newCard = {name:titleInput , link:urlInput}
     const card = createCard(newCard)
     const cardElement = card.createCard()
-    document.querySelector(".cards").prepend(cardElement);
+    cards.prepend(cardElement);
     closeAddCardPopup()
 
     cardTitleInput.value = ""
     cardUrlInput.value = ""
-    addCardValidator.enableValidation()
+
 }
 
 createForm.addEventListener("submit",addCardFormSubmitHandler)
@@ -93,7 +89,7 @@ initialCards.forEach((initialcard) => {
   const card = createCard(initialcard);
   const cardElement = card.createCard();
 
-  document.querySelector(".cards").prepend(cardElement);
+  cards.prepend(cardElement);
 
 });
 

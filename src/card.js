@@ -1,6 +1,5 @@
 import {openPopup} from "./utils.js"
-import { initialCards,pictureTitle,pictureImage,picture } from "./constants.js";
-
+import { initialCards,pictureTitle,pictureImage,popupImage } from "./constants.js";
 
 export class Card{
     constructor(data,template){
@@ -46,7 +45,7 @@ export class Card{
      pictureImage.src = this._image;
      pictureTitle.textContent = this._title;
      pictureImage.alt = this._title;
-     openPopup(picture);
+     openPopup(popupImage);
  }
 
  _openCardEventListener(){
@@ -54,10 +53,6 @@ export class Card{
          this._openCardImageHandler()
      })
  }
-
-
-
-
 
  createCard(){
        this._element = this._cardTemplate()

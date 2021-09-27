@@ -1,26 +1,28 @@
 
 const buttonEdit = document.querySelector(".profile__button_type_edit");
-const popupEdit = document.querySelector(".popup_type_edit");
-const fullNameInput = popupEdit.querySelector(".popup__input_type_full-name");
-const hobbyInput = popupEdit.querySelector(".popup__input_type_hobby");
+const popupEditProfile = document.querySelector(".popup_type_edit");
+const fullNameInput = popupEditProfile.querySelector(".popup__input_type_full-name");
+const hobbyInput = popupEditProfile.querySelector(".popup__input_type_hobby");
 const fullName = document.querySelector(".profile__full-name");
 const hobby = document.querySelector(".profile__hobby");
 const buttonSave = document.querySelector(".popup__button_type_save");
 const formEdit = document.querySelector(".popup__form_type_edit");
-const buttonExitEdit = popupEdit.querySelector(".popup__button_type_exit");
+const buttonExitEdit = popupEditProfile.querySelector(".popup__button_type_exit");
 
 const buttonAdd = document.querySelector(".profile__button_type_add");
-const popupCreate = document.querySelector(".popup_type_create"); 
-const buttonExitAdd = popupCreate.querySelector(".popup__button_type_exit");
+const popupAddCard = document.querySelector(".popup_type_create"); 
+const buttonExitAdd = popupAddCard.querySelector(".popup__button_type_exit");
 
-const picture = document.querySelector(".image-popup");
-const buttonExitCard = picture.querySelector(".popup__button_type_exit") 
+const popupImage = document.querySelector(".image-popup");
+const buttonExitCard = popupImage.querySelector(".popup__button_type_exit") 
 const pictureTitle = document.querySelector(".image-popup__title");
 const pictureImage = document.querySelector(".image-popup__image")
 
+const cards = document.querySelector(".cards");
+
 const createForm = document.querySelector(".popup__form_type_create");
-const cardTitleInput = popupCreate.querySelector(".popup__input_type_image-title");
-const cardUrlInput = popupCreate.querySelector(".popup__input_type_url");
+const cardTitleInput = popupAddCard.querySelector(".popup__input_type_image-title");
+const cardUrlInput = popupAddCard.querySelector(".popup__input_type_url");
 
 const overlays = Array.from(document.querySelectorAll(".popup"));
 
@@ -63,5 +65,5 @@ const initialCards = [
    
 
 
-    export{pictureImage,initialCards,enableValidaitor,overlays,cardUrlInput,cardTitleInput,createForm,pictureTitle,buttonEdit,popupEdit,fullNameInput,hobbyInput,fullName,hobby,buttonSave,formEdit,buttonExitEdit,buttonAdd,popupCreate,buttonExitAdd,picture,buttonExitCard}
+    export{cards,pictureImage,initialCards,enableValidaitor,overlays,cardUrlInput,cardTitleInput,createForm,pictureTitle,buttonEdit,popupEditProfile,fullNameInput,hobbyInput,fullName,hobby,buttonSave,formEdit,buttonExitEdit,buttonAdd,popupAddCard,buttonExitAdd,popupImage,buttonExitCard}
 
