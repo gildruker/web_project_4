@@ -1,4 +1,3 @@
-import {openPopup} from "./utils.js"
 import {pictureTitle,pictureImage,popupImage } from "./constants.js";
 
 export default class Card{
