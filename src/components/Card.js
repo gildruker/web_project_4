@@ -1,4 +1,4 @@
-import {pictureTitle,pictureImage,popupImage } from "./constants.js";
+import {pictureTitle,pictureImage,popupImage } from "../utils/constants.js";
 
 export default class Card{
     constructor(data,template,handleCardClick){

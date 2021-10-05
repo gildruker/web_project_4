@@ -1,4 +1,4 @@
-import { formEdit } from "./constants.js";
+import { formEdit } from "../utils/constants.js";
 import Popup from "./Popup.js";
 
 export default class PopupWithForm extends Popup{

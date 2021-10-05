@@ -1,13 +1,13 @@
-import "./styles/index.css"
-import profilePic from "./images/profile-pic.jpg"
-import headerTitle from "./images/header-title.png"
-import PopupWithForm from "./PopupWithForm.js";
-import PopupWithImage from "./PopupWithImage.js";
-import Card from "./Card.js";
-import { FormValidator} from "./FormValidator.js";
-import {editNameInput,editHobbyInput,headerSvg,profileImage,cards,enableValidaitor,initialCards,hobby,formEdit,buttonExitEdit,buttonAdd,popupAddCard,buttonExitAdd,popupImage,buttonExitCard,overlays,cardUrlInput,cardTitleInput,createForm,buttonEdit,popupEditProfile,fullNameInput,hobbyInput,fullName} from "./constants.js" 
-import Section from "./Section.js"
-import UserInfo from "./UserInfo.js"
+import "../styles/index.css"
+import profilePic from "../images/profile-pic.jpg"
+import headerTitle from "../images/header-title.png"
+import PopupWithForm from "../components/PopupWithForm.js";
+import PopupWithImage from "../components/PopupWithImage.js";
+import Card from "../components/Card.js";
+import { FormValidator} from "../utils/FormValidator.js";
+import {editNameInput,editHobbyInput,headerSvg,profileImage,cards,enableValidaitor,initialCards,hobby,formEdit,buttonExitEdit,buttonAdd,popupAddCard,buttonExitAdd,popupImage,buttonExitCard,overlays,cardUrlInput,cardTitleInput,createForm,buttonEdit,popupEditProfile,fullNameInput,hobbyInput,fullName} from "../utils/constants.js" 
+import Section from "../utils/Section.js"
+import UserInfo from "../utils/UserInfo.js"
 
 
 profileImage.src = profilePic;

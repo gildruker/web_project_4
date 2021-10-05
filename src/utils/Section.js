@@ -1,4 +1,4 @@
-import Card from "./Card.js";
+import Card from "../components/Card.js";
 
 export default class Section{
 constructor({items , renderer} ,containerSelector){
