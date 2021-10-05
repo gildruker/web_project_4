@@ -24,6 +24,9 @@ const createForm = document.querySelector(".popup__form_type_create");
 const cardTitleInput = popupAddCard.querySelector(".popup__input_type_image-title");
 const cardUrlInput = popupAddCard.querySelector(".popup__input_type_url");
 
+const editNameInput = document.querySelector(".popup__input_type_full-name");
+const editHobbyInput = document.querySelector(".popup__input_type_hobby");
+
 const overlays = Array.from(document.querySelectorAll(".popup"));
 
 const initialCards = [
@@ -62,8 +65,8 @@ const initialCards = [
     buttonElement:".popup__button_type_submit"
   };
 
-   
+  const profileImage = document.querySelector("#profile__avatar")
+  const headerSvg = document.querySelector("#header__title")
 
-
-    export{cards,pictureImage,initialCards,enableValidaitor,overlays,cardUrlInput,cardTitleInput,createForm,pictureTitle,buttonEdit,popupEditProfile,fullNameInput,hobbyInput,fullName,hobby,buttonSave,formEdit,buttonExitEdit,buttonAdd,popupAddCard,buttonExitAdd,popupImage,buttonExitCard}
+    export{editNameInput,editHobbyInput,headerSvg,profileImage,cards,pictureImage,initialCards,enableValidaitor,overlays,cardUrlInput,cardTitleInput,createForm,pictureTitle,buttonEdit,popupEditProfile,fullNameInput,hobbyInput,fullName,hobby,buttonSave,formEdit,buttonExitEdit,buttonAdd,popupAddCard,buttonExitAdd,popupImage,buttonExitCard}
 
