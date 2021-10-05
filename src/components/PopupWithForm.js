@@ -1,4 +1,4 @@
-import { formEdit } from "../utils/constants.js";
+
 import Popup from "./Popup.js";
 
 export default class PopupWithForm extends Popup{
@@ -31,11 +31,4 @@ export default class PopupWithForm extends Popup{
         super.close();
         this._popup.querySelector(".popup__form").reset();
     }
-
-    reset(){
-        this._popup.querySelector(".popup__input_type_image-title").value = ""
-        this._popup.querySelector(".popup__input_type_url").value = ""
-    }
-
-
 }
