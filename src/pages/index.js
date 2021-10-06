@@ -43,7 +43,7 @@ const popupCreate = new PopupWithForm(".popup_type_create",(inputValues)=>{
   const card = createCard(newCard);
   const cardElement = card.createCard();
   popupCreate.close();
-  cards.prepend(cardElement)
+  initialCardsRendering.prependItem(cardElement)
 })
 
 popupCreate.setEventListeners();
@@ -54,8 +54,8 @@ buttonAdd.addEventListener("click",()=>{
 
 const edit = new UserInfo({userNameSelector:".profile__full-name",userJobSelector:".profile__hobby"})
 
-const popupEdit = new PopupWithForm(".popup_type_edit",()=>{
-  edit.setUserInfo(popupEdit._getInputValues());
+const popupEdit = new PopupWithForm(".popup_type_edit",(inputValues)=>{
+  edit.setUserInfo(inputValues);
   popupEdit.close();
 })
 
